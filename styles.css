@@ -1,1 +1,60 @@
 /* Add your styles here */
+
+.container{
+  overflow: hidden;
+background-color: #f1f1f1;
+position: fixed; /* Set the navbar to fixed position */
+top: 0; /* Position the navbar at the top of the page */
+width: 100%; /* Full width */
+}
+.navbar{
+  overflow: hidden;
+background-color: #5191fd;
+position: relative; /* Set the navbar to fixed position */
+top: 0; /* Position the navbar at the top of the page */
+width: 100%; /* Full width */
+}
+.navbar a {
+  
+  float: left;
+  position: relative;
+  background-color: #f1f1f1;
+  width: 80px;
+  margin: 10px;
+  text-align: center;
+  line-height: 50px;
+  font-size: 20px;
+  color:black;
+  text-decoration: none;
+  border-radius: 2px;
+}
+.header{
+  float: left;
+  position: relative;
+  background-color: #cdcdcd;
+  width: 100%;
+  text-align: center;
+  line-height: 200px;
+  font-size: 70px;
+  color:black;
+}
+h3{
+  
+  position:relative;
+  
+  left: 10%;
+  font-size: 25px;
+  color:black;
+  font:bold;
+  margin-top: 3%;
+}
+
+p{
+  position: relative;
+  font:bold;
+  left: 10%;
+  font-size: 15px;
+  color:black;
+}
+
+
