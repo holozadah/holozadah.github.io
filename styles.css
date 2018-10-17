@@ -1,60 +1,134 @@
-/* Add your styles here */
 
-.container{
-  overflow: hidden;
-background-color: #f1f1f1;
-position: fixed; /* Set the navbar to fixed position */
-top: 0; /* Position the navbar at the top of the page */
-width: 100%; /* Full width */
-}
 .navbar{
-  overflow: hidden;
-background-color: #5191fd;
-position: relative; /* Set the navbar to fixed position */
-top: 0; /* Position the navbar at the top of the page */
-width: 100%; /* Full width */
+    background-color: white;
 }
-.navbar a {
-  
-  float: left;
-  position: relative;
-  background-color: #f1f1f1;
-  width: 80px;
-  margin: 10px;
-  text-align: center;
-  line-height: 50px;
-  font-size: 20px;
-  color:black;
-  text-decoration: none;
-  border-radius: 2px;
-}
-.header{
-  float: left;
-  position: relative;
-  background-color: #cdcdcd;
-  width: 100%;
-  text-align: center;
-  line-height: 200px;
-  font-size: 70px;
-  color:black;
-}
-h3{
-  
-  position:relative;
-  
-  left: 10%;
-  font-size: 25px;
-  color:black;
-  font:bold;
-  margin-top: 3%;
+.navbar-brand{
+position: absolute;
+display:block;
+background-color:rgb(84, 218, 200);
+width:200px;
+height:50px;
+font-family: 'Times New Roman', Times, serif;
+left:250px;
+
 }
 
-p{
-  position: relative;
-  font:bold;
-  left: 10%;
-  font-size: 15px;
-  color:black;
+.navbar-brand p
+{
+color: white;
+font-weight: bold;
+font-size: 35px;
+text-align: center;
+
+}
+
+/* Making our navbar li's inline-block elements this makes it so we can have multiple on the same line. Floats could have been used too */
+ul{
+    position: absolute;
+    right:0;
 }
 
 
+body {
+    position: relative;
+    background:  rgb(216, 216, 216);
+    
+}
+
+
+.box{
+    color:white;
+    background: white;
+}
+
+.box_1{
+    
+    padding: 50px;
+    
+}
+
+.box_1_header{
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    color:rgb(84, 218, 200);
+}
+
+
+.img_1{
+    float:left;
+    height: 180px;
+    width: 200px;
+    
+}
+
+
+.box_2{
+    
+    padding: 50px;
+    
+}
+.h2{
+    
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    color:rgb(84, 218, 200);
+}
+.side-viz {
+    padding:5px 5px 5px 5px;
+    width: 125%;
+    height: 100%;
+  }
+.paragraph{
+    margin: 10px;
+  font-size: 14px;
+  line-height: 1.8em;
+  color: slategray;
+}
+
+
+.first_footer{
+    position: relative;
+    width:100%;
+    background-color: rgb(84, 218, 200);
+    height:5px;
+    margin: 250px 100px 0px 0px;
+   
+}
+
+.Sec_footer{
+    position: relative;
+    width:100%;
+    background-color: grey;
+    height:50px;
+    margin: 0px 0px 0px 0px;
+    
+
+}
+
+.copy_right{
+    color:white;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 45px; 
+}
+
+@media (min-width: 1200px) {
+    .row.row-grid [class*="col-lg-"] + [class*="col-lg-"] {
+        margin-top: 0;
+    }
+}
+@media (min-width: 992px) {
+    .row.row-grid [class*="col-md-"] + [class*="col-md-"] {
+        margin-top: 0;
+    }
+}
+@media (min-width: 768px) {
+    .row.row-grid [class*="col-sm-"] + [class*="col-sm-"] {
+        margin-top: 0;
+    }
+}
+@media (min-width: 768px) {
+  .row.row-grid [class*="col-xs-"] + [class*="col-xs-"] {
+      margin-top: 0;
+  }
+}
