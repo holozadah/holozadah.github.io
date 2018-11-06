@@ -1,126 +1,126 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <title>Bootstrap Example</title>
+
+<html>
+
+<head>  
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
-
-  <link rel="stylesheet" href="styles.css">
+  <title>Document</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/superhero/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+  <link rel="stylesheet" href="static/css/style.css">
+  <script src="https://d3js.org/d3.v5.min.js"></script>
 </head>
-<header>
-    
-        <nav class="navbar">
-                <div class="container-fluid">
-                  <div class="navbar-header">
-                    <a class="navbar-brand" href="index.html">
-                        <p>Latitude</p></a>
-                  </div>
-                  <ul class="nav navbar-nav">
-                    <li class="dropdown">
-                      <a class="dropdown-toggle" data-toggle="dropdown" href="#">Plots<span class="caret"></span></a>
-                      <ul class="dropdown-menu">
-                        <li><a href="max_temp.html">Max Temperature</a></li>
-                        <li><a href="humidity.html">Humidity</a></li>
-                        <li><a href="cloudiness.html">Cloudiness</a></li>
-                        <li><a href="wind_speed.html">Wind Speed</a></li>
-                      </ul>
-                    </li>
-                    <li><a href="Comparisons.html">Comparisons</a></li>
-                    <li><a href="data.html">Data</a></li>
-                  </ul>
-                </div>
-              </nav>
- 
-</header>
-
-        
 
 <body>
-        <div class="container">
-                        <div class="row row-grid">
-                            <div class="col-md-8">
-                                
-        
-                <div class="box box_1">
-                    
-                        <h1 class="box_1_header"> Summary: Latitude vs. X</h1>
-                    
-                        <img class= "img_1" src="Fig1_1.png" >
-                        <p class="paragraph">The purpose of this project was to analyze weather changes as you get
-                            closer to the equator. to accomplish this analysis, we first pulled 
-                            data from the OpenWeatherMap API to assemble a dataset on over 500 cities.    
-                        </p>
-                        <br>
-                        <p class="paragraph">
-                            After assembling the dataset, we used Matplotlib to plot various
-                            aspects of the water vs. latitude. Factors we looked at included:
-                            temperature, cloudiness, wind speed, and humidity. This site provides 
-                            the source data and visualizations created as part of the analysis, 
-                            as well as explanations and descriptions of any trends and correlations
-                            witenessed.
-                        </p>
-                      
-                      </div>
+  <div class="wrapper">
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">UFO Sightings
+            <img class="nav-ufo" src="static/images/ufo.svg">
+          </a>
         </div>
+      </div>
+    </nav>
+    <div class="hero text-center">
+      <h1>UFO Sightings</h1>
+      <p>The Truth is Out There</p>
+    </div>
+    <div class="container">
+      <div class="row margin-top-50">
+        <div class="col-md-2">
+          <aside class="filters">
+            <div class="panel panel-default">
+              <div class="panel-heading">Filter Search</div>
+              <div class="panel-body">
+                <form>
+                  <div class="form-group">
+                    <ul class="list-group" id="filters">
+                      <li class="filter list-group-item">
 
-        <div class="col-md-4">
-                <div class="box box_2">
-                    <h2 class="h2">Visualizations</h2>
-                    <hr>
+                          <select id="selDataset" onchange="getData(this.value)">
+                              <option value="dataset1">Date</option>
+                              <option value="dataset2">City</option>
+                              <option value="dataset3">State</option>
+                              <option value="dataset4">Country</option>
+                              <option value="dataset5">Shape</option>
+                            
+                            </select>
 
-
-                    <div class="row">
-                        <div class="col-xs-6 col-sm-3 col-md-6">
-                            <figure>
-                                <a href="temp.html">
-                                    <img class="side-viz" src="Fig1.png" alt="Latitude vs. Temperature">
-                                </a>
-                            </figure>
-                        </div>
-
-                        <div class="col-xs-6 col-sm-3 col-md-6">
-                            <figure>
-                                <a href="humid.html">
-                                    <img class="side-viz" src="Fig2.png" alt="Latitude vs. Humidity">
-                                </a>
-                            </figure>
-                        </div>
-
-                        <div class="col-xs-6 col-sm-3 col-md-6">
-                            <figure>
-                                <a href="cloud.html">
-                                    <img class="side-viz" src="Fig3.png" alt="Latitude vs. Cloudiness">
-                                </a>
-                            </figure>
-                        </div>
-
-                        <div class="col-xs-6 col-sm-3 col-md-6">
-                            <figure>
-                                <a href="wind.html">
-                                    <img class="side-viz" src="Fig4.png" alt="Latitude vs. Wind Speed">
-                                </a>
-                            </figure>
-                        </div>
+                            <label id="fill2" for="fill">Enter a Date</label>
+                            <input class="form-control" id="datetime" type="text" placeholder="1/11/2011">
+                      </li>
+                    </ul>
+                  </div>
+                  <button id="filter-btn" type="submit" class="btn btn-default">Filter Table</button>
+                </form>
+              </div>
+            </div>
+          </aside>
+        </div>
+        <div class="col-md-10">
+          <div id="table-area" class="">
+            <table id="ufo-table" class="table table-striped">
+              <thead>
+                <tr class="active">
+                  <th class="table-head">Date</th>
+                  <th class="table-head">City</th>
+                  <th class="table-head">State</th>
+                  <th class="table-head">Country</th>
+                  <th class="table-head">Shape</th>
+                  <th class="table-head">Duration</th>
+                  <th class="table-head">Comments</th>
+                </tr>
+              </thead>
+              <tbody id="tblMain">
+                <tr></tr>
+               
+      
+          
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer class="footer">
+      <span class="bottom">UFO Sightings</span>
+    </footer>
   </div>
-</div>      
-</div>
-</div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.11.0/d3.js"></script>
+  <script src="static/js/data.js"></script>
+  <script src="static/js/app.js"></script>
+  <script language="javascript">
+
+      var tbl = document.getElementById("tblMain");
+
+      if (tbl != null) {
+
+          if (tbl.rows[0] != null) {
+
+              tbl.rows[0].style.backgroundColor = "black";
+
+              tbl.rows[0].style.color = "#FFFFFF";
+
+          }
+
+          for (var i = 1; i < tbl.rows.length; i++) {
+
+              tbl.rows[i].style.cursor = "pointer";
+
+              tbl.rows[i].onmousemove = function () { this.style.backgroundColor = "black"; this.style.color = "red"; };
+
+              tbl.rows[i].onmouseout = function () { this.style.backgroundColor = ""; this.style.color = ""; };
+
+          }
+
+      }
+
+  </script>
+ 
 </body>
 
-
-<footer class="first_footer">
-
-</footer>
-<footer class="Sec_footer">
-        <div class="copy_right">
-            <p>Copyright Coding Bootcamp 2017</p>
-        </div>
-    </footer>
-    
-    
-    
 </html>
